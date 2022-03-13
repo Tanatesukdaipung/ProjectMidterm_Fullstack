@@ -1,6 +1,5 @@
 import './App.css';
 import {
-  BrowserRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
@@ -13,7 +12,6 @@ import AuthorContentPage from './Componant/AuthorPage/AuthorContentPage';
 function App() {
   return (
     <div>
-      <Router>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/Author/:id' element={<AuthorContentPage />} />
@@ -21,7 +19,6 @@ function App() {
           <Route path='/Category/:id' element={<CategoryPage />} />
           <Route path='/PostPage/:id' element={<PostContentPage/>} />
         </Routes>
-      </Router>
     </div>
   );
 }
