@@ -1,7 +1,6 @@
-import { Col, Container,Row } from "reactstrap";
+import { Container,Row } from "reactstrap";
 import NavigationBar from "../HomePage/Navigation";
 import GetPostContant from "./GetPostContant";
-import PostCard from "./PostCard";
 
 export default function PostContentPage(){
     return(
