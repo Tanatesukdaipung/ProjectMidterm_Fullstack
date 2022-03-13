@@ -13,11 +13,11 @@ function App() {
   return (
     <div>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/PostPage/:id' element={<PostContentPage/>} />
+          <Route path='/Category/:id' element={<CategoryPage />} />
           <Route path='/Author/:id' element={<AuthorContentPage />} />
           <Route path='/Author' element={<AuthorPage />} />
-          <Route path='/Category/:id' element={<CategoryPage />} />
-          <Route path='/PostPage/:id' element={<PostContentPage/>} />
+          <Route path='/' element={<HomePage />} />
         </Routes>
     </div>
   );
