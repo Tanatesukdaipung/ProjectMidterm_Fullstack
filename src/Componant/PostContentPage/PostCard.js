@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react';
-import { Card, CardBody, CardHeader, CardTitle, Col } from 'reactstrap';
+import { Card, CardBody, CardHeader, CardTitle } from 'reactstrap';
 import GetDataFromAPI from '../GetDataFromAPI';
 
 export default function PostCard({id}){

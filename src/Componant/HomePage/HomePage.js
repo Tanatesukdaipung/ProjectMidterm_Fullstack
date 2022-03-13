@@ -1,7 +1,5 @@
 import {
-    Container, Row, Col, Form, Input, Button, Navbar, Nav,
-    NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem
+    Container, Row, Col
   } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './Navigation';
