@@ -4,6 +4,7 @@ import {
      Navbar, Nav, NavLink, UncontrolledDropdown,
     DropdownToggle, DropdownMenu, DropdownItem
   } from 'reactstrap';
+import { Link } from "react-router-dom";
 
 export default function NavigationBar(){
     const [Categories , setData] = useState([]);
@@ -23,9 +24,11 @@ export default function NavigationBar(){
                     <NavLink href='/'>
                         HomePage
                     </NavLink>
-                    <NavLink href='/Author'>
-                        AuthorPage
-                    </NavLink>
+                    <Link to="/Author" style={{ color: 'black', textDecoration: 'none' }}>
+                        <NavLink>
+                            AuthorPage
+                        </NavLink>
+                    </Link>
                     <UncontrolledDropdown>
                         <DropdownToggle
                             caret
@@ -34,7 +37,7 @@ export default function NavigationBar(){
                         Category
                         </DropdownToggle>
                         <DropdownMenu right>
-                            {Categories.map(data => <DropdownItem href={'/Category/' + data.id} >{data.id}<p>{data.description}</p></DropdownItem>)}
+                            {Categories.map(data => <Link to={'/Category/' + data.id} style={{ color: 'black', textDecoration: 'none' }}><DropdownItem>{data.id}<p>{data.description}</p></DropdownItem></Link>)}
                         </DropdownMenu>
                     </UncontrolledDropdown>
                 </Nav>
