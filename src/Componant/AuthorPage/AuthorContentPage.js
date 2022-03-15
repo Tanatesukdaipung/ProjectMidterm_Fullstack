@@ -34,6 +34,9 @@ export default function AuthorContentPage(){
     console.log(post_data)
     return(
         <Container>
+            <Row>
+                <h1>AuthorPage</h1>
+            </Row>
             <NavigationBar/>
             <Row>
                 <Col>
