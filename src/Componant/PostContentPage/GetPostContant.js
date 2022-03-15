@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom";
 import { Col } from "reactstrap";
 import GetDataFromAPI from "../GetDataFromAPI";
+import Comment from "./Comment";
 
 export default function GetPostContant(){
     let {id} = useParams();
@@ -23,11 +24,13 @@ export default function GetPostContant(){
     },[id])
     console.log(data_api)
     console.log(Title_name)
+    console.log(normalData)
     return (
         <Col>
             <h2>{Title_name}</h2>
             <p>By <Link to={"/Author/" + normalData.author}>ID:{normalData.author}</Link></p>
             <div dangerouslySetInnerHTML={{__html: data_api}}/>
+            <Comment postId = {id} />
         </Col>
     )
 }
